@@ -28,7 +28,7 @@ ajax.open("POST", "/batchman", true);
 
 ajax.onreadystatechange = function () {
   
-  if (ajax.readyState != 4 || r.status != 200) {
+  if (ajax.readyState != 4 || ajax.status != 200) {
     
     return;
 
