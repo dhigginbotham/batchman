@@ -3,7 +3,7 @@ gives you the ability to post `text/json` array of parameters and get the api re
 
 wip, but simple example:
 
-```
+```js
 // ... express app stuff ...
 
 var Batchman = require('batchman');
@@ -16,7 +16,7 @@ batchman.mount(app, function (msg) {
 
 then post to `/batchman`
 
-```
+```json
 [{"url":"https://api.github.com/users/dhigginbotham"},
 {"url":"https://api.github.com/users/dhigginbotham"}]
 ```
