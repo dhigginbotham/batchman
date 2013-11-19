@@ -18,7 +18,9 @@
     "lodash": "~2.3.0",
     "request": "~2.27.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "express": "~3.4.4"
+  },
   "bugs": {
     "url": "https://github.com/dhigginbotham/batchman/issues",
     "email": "davehigginbotham@gmail.com"
