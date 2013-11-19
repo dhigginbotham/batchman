@@ -1,5 +1,5 @@
 ## batchman
-gives you the ability to post `text/json` array of parameters and get the api returned values for each array in the collection. 
+gives you the ability to post `application/json` array of parameters and get the api returned values for each array in the collection. 
 
 wip, but simple example:
 
