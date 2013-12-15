@@ -55,8 +55,6 @@ batch.mount(app, function (msg) {
   // some hot code swapping on the fly, idk
 });
 
-console.log(batch);
-
 app.get('/', function (req, res) {
   res.send('hello guv');
 });
