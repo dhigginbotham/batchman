@@ -16,7 +16,8 @@
   "license": "MIT",
   "dependencies": {
     "lodash": "~2.3.0",
-    "request": "~2.27.0"
+    "request": "~2.27.0",
+    "sloth": "git+https://github.com/dhigginbotham/sloth"
   },
   "devDependencies": {
     "express": "~3.4.4"
