@@ -14,31 +14,6 @@ batchman.mount(app, function (msg) {
 });
 ```
 
-then post to `/batchman`
-
-```js
-var jsonArray = [
-  {"url":"https://api.github.com/users/dhigginbotham"},
-  {"url":"https://api.github.com/users/dhigginbotham"}
-];
-
-var ajax = new XMLHttpRequest();
-
-ajax.open("POST", "/batchman", true);
-
-ajax.onreadystatechange = function () {
-  
-  if (ajax.readyState != 4 || ajax.status != 200) {
-    
-    return;
-
-  };
-
-  console.log(ajax.responseText);
-
-};
-
-ajax.send(jsonArray);
-```
+then post to `/batchman` with js or use postman to test
 
 receive back my github json, twice, with one client request.

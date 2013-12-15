@@ -8,6 +8,16 @@ app.use(express.urlencoded());
 
 var Batchman = require('../lib');
 
+var debugInputs = function (req, res, next) {
+
+  var body = req.body || null;
+
+  console.log(body);
+
+  return next();
+
+};
+
 var addGitHubUserAgent = function (req, res, next) {
 
   var ln = req.body.length;
@@ -18,7 +28,7 @@ var addGitHubUserAgent = function (req, res, next) {
 
       var bod = req.body[i];
 
-      if (bod.hasOwnProperty('url') && /github.com/gi.test(bod.url)) {
+      if (bod.hasOwnProperty('url') && /api.github.com/gi.test(bod.url)) {
 
         bod.headers = {
           "User-Agent": "dhigginbotham"
@@ -35,7 +45,7 @@ var addGitHubUserAgent = function (req, res, next) {
 };
 
 var batch = new Batchman({
-  middleware: [addGitHubUserAgent] // just like adding middleware into anything, accepts an array
+  middleware: [addGitHubUserAgent, debugInputs] // just like adding middleware into anything, accepts an array
 });
 
 batch.mount(app, function (msg) {
@@ -44,6 +54,8 @@ batch.mount(app, function (msg) {
   // anything else, maybe you're doing
   // some hot code swapping on the fly, idk
 });
+
+console.log(batch);
 
 app.get('/', function (req, res) {
   res.send('hello guv');
