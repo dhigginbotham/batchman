@@ -1,4 +1,12 @@
-## batchman
+```
+ __               _          __                                    
+[  |             / |_       [  |                                   
+ | |.--.   ,--. `| |-'.---.  | |--.   _ .--..--.   ,--.   _ .--.   
+ | '/'`\ \`'_\ : | | / /'`\] | .-. | [ `.-. .-. | `'_\ : [ `.-. |  
+ |  \__/ |// | |,| |,| \__.  | | | |  | | | | | | // | |, | | | |  
+[__;.__.' \'-;__/\__/'.___.'[___]|__][___||__||__]\'-;__/[___||__] 
+                                                                   
+```                                                                   
 batch api proxy with ratelimiting, usable as middleware or mountable for an express app. post multiple xhr requests as one json array on the client and get back your multiple responses.
 
 ```js
