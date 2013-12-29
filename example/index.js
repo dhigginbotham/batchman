@@ -45,6 +45,7 @@ var addGitHubUserAgent = function (req, res, next) {
 };
 
 var batch = new Batchman({
+  delay: '20s',
   middleware: [addGitHubUserAgent, debugInputs] // just like adding middleware into anything, accepts an array
 });
 
